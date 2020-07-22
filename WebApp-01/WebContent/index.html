@@ -1,0 +1,125 @@
+
+ <!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="js/angular.js"></script>
+<script src="js/appModule.js"></script>
+<script src="js/firstController.js"></script>
+<title>Insert title here</title>
+</head>
+<body ng-app="myApp"  >
+<h1>five demo</h1>
+<div ng-controller="firstController">
+{{" msg : "+msg}}<br>
+{{"color : "+color}}<br>
+{{"2+10 = "+add(2,10)}}<br>
+{{"test = "+test()}}<br>
+</div>
+{{" message : "+message}}<br>
+{{"color : "+color}}<br>
+</body>
+</html> -->
+
+
+<!--  <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="js/angular.min.js"></script>
+<script src="js/appModule.js"></script>
+<script src="js/firstController.js"></script>
+<title>Insert title here</title>
+</head>
+<body ng-app="myApp" >
+<h1>fourth demo</h1>
+<div ng-controller="firstController">
+Name : <input type="text" ng-model="uname"><br>
+City : <input type="text" ng-model="city"><br>
+{{uname}}<br>
+{{city}}</br>
+<ol>
+    <li ng-repeat="x in color">{{x}}</li>
+</ol><br>
+{{"test = "+test()}}<br>
+   
+</div>
+{{" msg : "+msg}}<br>
+{{"color : "+color}}<br>
+{{"2+10 = "+add(2,10)}}
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<h1>Second demo</h1>
+<meta charset="UTF-8">
+<script src="js/angular.min.js"></script>
+<script src="js/appModule.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+<div  ng-app="myApp" ng-init="number=56; name='Mahi'; color=['Red','Yellow','Green']">
+<p>Name : {{name}}, Number:{{number}}</p><br>
+<li ng-repeat="x in color">{{x}}</li>
+
+</div>
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<h1>First demo</h1>
+<meta charset="UTF-8">
+<script src="js/angular.min.js"></script>
+<title>Insert title here</title>
+</head>
+<body ng-app="">
+
+Username: <input name = "uname" ng-model="un"><div style = "colour : red">{{"Name : "+un}}</div><br>
+
+selector : <select ng-model="color">
+<option>Red</option>
+<option>Green</option>
+<option>Yellow</option>
+</select>
+
+<div style = "colour : red">{{"colour : "+color}}</div><br>
+
+<p>Color : <span ng-bind="color"></span></p><br>
+
+Name : <input type="text" style="background-color:{{color}}">
+
+<div ng-init="number=56; name='Mahi'; color=['Red','Yellow','Green']">
+
+<p>Name : {{name}}, Number:{{number}}</p><br>
+
+</div>
+</body>
+</html> -->
+
+
+ <!DOCTYPE html>
+<html>
+<head>
+<h1>Third demo</h1>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/angular.min.js"></script>
+<script src="js/appModule.js"></script>
+<script src="js/myController.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myDemoController">
+<h1>Login form</h1><br>
+<form action="next.html" ng-submit = "fun1($event)">
+Username: <input name = "uname" ng-model="un"><div style = "colour : red">{{msg1}}</div><br>
+Password: <input type = "password" name = "pwd" ng-model="pw"><div style = "colour : red">{{msg2}}</div><br>
+<input type="submit" value="login">
+</form>
+</body>
+</html> 
