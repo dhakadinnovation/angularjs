@@ -3,6 +3,8 @@ myApp.controller("bookController",function($scope, $http){
 	$scope.uname = "Mahi";
 	$scope.city = "Mumbai";
 	$scope.msg = "welcome";
+	//$scope.baseUrl = "http://dhakadinnovation.com:9040/v1";
+	$scope.baseUrl = "http://localhost:9040/v1";
 	$scope.color = ["red","green","yellow","blue"];
 	
 	$scope.resetForm = function(){
@@ -14,11 +16,12 @@ myApp.controller("bookController",function($scope, $http){
 	$scope.getBooks = function(){
 		$http({
 			method : 'GET',
-			url : 'http://localhost:8080/books/',
+			url : $scope.baseUrl+'/books/',
 			headers: {
 				 'X-Requested-With': 'XMLHttpRequest',
-				   'Content-Type': 'text/plain',
-				   'Access-Control-Allow-Origin': '*'
+				   'Content-Type': 'application/json',
+				   'Access-Control-Allow-Origin': '*',
+				   'secure': false
 				 }
 		}).then(function(response){
 			$scope.records = response.data;
@@ -32,11 +35,12 @@ myApp.controller("bookController",function($scope, $http){
 	$scope.deleteBook = function(){
 		$http({
 			method : 'DELETE',
-			url : 'http://localhost:8080/books/'+$scope.dBookId,
+			url : $scope.baseUrl+'/books/'+$scope.dBookId,
 			headers: {
 				 'X-Requested-With': 'XMLHttpRequest',
-				   'Content-Type': 'text/plain',
-				   'Access-Control-Allow-Origin': '*'
+				   'Content-Type': 'application/json',
+				   'Access-Control-Allow-Origin': '*',
+				   'secure': false
 				 }
 		}).then(function(response){
 			//$scope.records = response.data;
@@ -51,11 +55,12 @@ myApp.controller("bookController",function($scope, $http){
 	$scope.addBook = function(){
 		$http({
 			method : 'POST',
-			url : 'http://localhost:8080/books/',
+			url : $scope.baseUrl+'/books/',
 			headers: {
 				 'X-Requested-With': 'XMLHttpRequest',
 				   'Content-Type': 'application/json',
-				   'Access-Control-Allow-Origin': '*'
+				   'Access-Control-Allow-Origin': '*',
+				   'secure': false
 				 },
 				 
 		     data: { id: $scope.bookId, name : $scope.bookName, discription : $scope.bookDis}
@@ -73,11 +78,12 @@ myApp.controller("bookController",function($scope, $http){
 	$scope.updateBook = function(){
 		$http({
 			method : 'PUT',
-			url : 'http://localhost:8080/books/'+$scope.bookId,
+			url : $scope.baseUrl+'/books/'+$scope.bookId,
 			headers: {
 				 'X-Requested-With': 'XMLHttpRequest',
 				   'Content-Type': 'application/json',
-				   'Access-Control-Allow-Origin': '*'
+				   'Access-Control-Allow-Origin': '*',
+				   'secure': false
 				 },
 				 
 		     data: { id: $scope.bookId, name : $scope.bookName, discription : $scope.bookDis}

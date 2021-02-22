@@ -6,10 +6,11 @@
 <script src="js/angular.min.js"></script>
 <script src="js/appModule.js"></script>
 <script src="js/bookController.js"></script>
+<link rel="stylesheet" href="js/css/bootstrap.css">
 </head>
 <body ng-app="myApp" ng-controller="bookController">
 <div class="container" style="width:100%;">
-<h5>To add the book details</h5>
+<h3>To add the book details</h3>
 Book Id : <input type="text" ng-model="bookId" name ="bId" size="20"/><br>
 Book Name : <input type="text" ng-model="bookName" name ="bName" size="20"/><br>
 Book Discription : <input type="text" ng-model="bookDis" name ="bDis" size="20"/><br>
@@ -17,13 +18,13 @@ Book Discription : <input type="text" ng-model="bookDis" name ="bDis" size="20"/
 <input type="button" style="cursor:pointer" value="reset" ng-click ="resetForm()" />
 <input type="button" style="cursor:pointer" value="update" ng-click ="updateBook()" /><hr>
 
-<h5>List of books</h5>
+<h3>List of books</h3>
 <input type="button" style="cursor:pointer" value="get books" ng-click ="getBooks()" /><br>
 <ul>
 <li ng-repeat="x in records">{{"id : "+x.id + " name : "+x.name +" dis : "+x.discription}}</li>
 </ul><hr>
 
-<h5>delete book</h5>
+<h3>delete book</h3>
 Book Id : <input type="text" ng-model="dBookId" name ="bId" size="20"/><br>
 <input type="button" style="cursor:pointer" value="delete book" ng-click ="deleteBook()" />
 <hr>
